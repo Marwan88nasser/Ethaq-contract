@@ -53,7 +53,7 @@
 }
 
 .green-color {
-  color: #11D861;
+  color: #33B469;
 }
 
 .orange-color {
@@ -118,6 +118,24 @@
 }
 .main-btn:hover {
   background-color: #1E88E5;
+}
+
+.btn-pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 50px;
+  background-color: #2B7CD3;
+  color: #fff;
+}
+.btn-pill.green {
+  background-color: #33B469;
+}
+.btn-pill.red {
+  background-color: #ED3A3A;
 }
 
 .header {
@@ -416,6 +434,34 @@ input:focus::placeholder {
 .box-attache p span {
   font-weight: 500;
   font-size: 12px;
+}
+
+.main-table {
+  width: 100%;
+  border-radius: 8px 8px 0px 0px;
+  border: 1px solid #e0e0e0;
+}
+.main-table thead {
+  background: #F9FAFC;
+}
+.main-table thead tr th {
+  padding: 12px 13px;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: right;
+}
+.main-table tbody {
+  background: #fff;
+}
+.main-table tbody tr td {
+  padding: 10px 13px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #7D7D7D;
+}
+.main-table tbody tr td .form-check .form-check-input {
+  width: 3.4em !important;
+  height: 1.7em;
 }
 
 .main-nav {

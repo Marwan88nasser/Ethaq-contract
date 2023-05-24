@@ -42,3 +42,19 @@
     background-color: $blue-dark-color;
   }
 }
+
+.btn-pill {
+  @include flex-center;
+  width: 100px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 50px;
+  background-color: $blue-color;
+  color: $white-color;
+  &.green {
+    background-color: $green-color;
+  }
+  &.red {
+    background-color: $red-color;
+  }
+}
