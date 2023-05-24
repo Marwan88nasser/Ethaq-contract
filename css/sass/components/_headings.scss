@@ -34,3 +34,21 @@
 // Labels Text Style
 .main-label {
 }
+<<<<<<< HEAD
+=======
+
+// badge
+.badge {
+  @include flex-center;
+  display: inline-flex;
+  @include circle(20px);
+  line-height: 20px;
+  padding: 0;
+  color: $white-color;
+  font-weight: 400;
+  font-size: 16px;
+  &.orange {
+    background-color: #ff731d;
+  }
+}
+>>>>>>> b282a6f3b9f927c6f9a0cc4d841c05e76f6254e4

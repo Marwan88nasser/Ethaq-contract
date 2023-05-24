@@ -1,17 +1,60 @@
-.btn-normal {
-  background-color: $white-color;
-  width: 96px;
-  height: 42px;
+.normal-btn {
   @include flex-center;
+  width: 96px;
+  height: 35px;
   gap: 5px;
-  line-height: 42px;
+  line-height: 35px;
+  background-color: $white-color;
   border: 1px solid #cacaca;
   border-radius: 4px;
   font-weight: 400;
   font-size: 16px;
+  color: $blue-color;
   line-height: 24px;
   transition: $sm-transition;
+  img {
+    filter: brightness(0) saturate(100%) invert(50%) sepia(54%) saturate(5206%)
+      hue-rotate(195deg) brightness(90%) contrast(83%);
+  }
   &:hover {
     background-color: #f3f2f2;
+  }
+}
+.main-btn {
+  @include flex-center;
+  width: 130px;
+  height: 35px;
+  gap: 5px;
+  line-height: 35px;
+  background-color: $blue-color;
+  border: 1px solid $blue-color;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 16px;
+  color: $white-color;
+  line-height: 24px;
+  transition: $sm-transition;
+  img {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%)
+      hue-rotate(163deg) brightness(103%) contrast(103%);
+  }
+  &:hover {
+    background-color: $blue-dark-color;
+  }
+}
+
+.btn-pill {
+  @include flex-center;
+  width: 100px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 50px;
+  background-color: $blue-color;
+  color: $white-color;
+  &.green {
+    background-color: $green-color;
+  }
+  &.red {
+    background-color: $red-color;
   }
 }

@@ -69,8 +69,11 @@ input {
   }
   .blocks-section {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     grid-gap: 10px;
+    @include minWidth(lg) {
+      grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    }
     .box-section {
       @include center-column;
       gap: 8px;
@@ -124,4 +127,78 @@ input {
 }
 .tab-pane {
   padding: 20px;
+}
+
+// will relive
+.box-photo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
+  .img-holder {
+    img {
+      @include circle(55px);
+    }
+  }
+}
+
+.box-attache {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #cecece;
+  border-radius: 4px;
+  height: 112px;
+  @include center-column;
+  gap: 15px;
+  [type="file"] {
+    @include reset-position;
+    @include full-w-h;
+    cursor: pointer;
+    opacity: 0;
+  }
+  p {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    span {
+      font-weight: 500;
+      font-size: 12px;
+    }
+  }
+}
+
+.main-table {
+  width: 100%;
+  border-radius: 8px 8px 0px 0px;
+  border: 1px solid #e0e0e0;
+  thead {
+    background: #F9FAFC;
+    tr {
+      th {
+        padding: 12px 13px;
+        font-weight: 500;
+        font-size: 16px;
+        text-align: right;
+      }
+    }
+  }
+  tbody {
+    background: #fff;
+    tr {
+      td {
+        padding: 10px 13px;
+        font-weight: 500;
+        font-size: 14px;
+        color: #7D7D7D;
+        .form-check {
+          .form-check-input {
+            width: 3.4em !important;
+            height: 1.7em;
+          }
+        }
+      }
+    }
+  }
 }
