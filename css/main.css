@@ -76,18 +76,11 @@
   background-color: rgba(30, 136, 229, 0.04);
 }
 
-<<<<<<< HEAD
 .gap-1px {
   gap: 1px;
 }
 
-.btn-normal {
-  background-color: #fff;
-  width: 96px;
-  height: 42px;
-=======
 .normal-btn {
->>>>>>> b282a6f3b9f927c6f9a0cc4d841c05e76f6254e4
   display: flex;
   align-items: center;
   justify-content: center;
