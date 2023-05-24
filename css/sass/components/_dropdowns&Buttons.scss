@@ -22,7 +22,7 @@
 }
 .main-btn {
   @include flex-center;
-  width: 125px;
+  width: 130px;
   height: 35px;
   gap: 5px;
   line-height: 35px;
@@ -34,6 +34,10 @@
   color: $white-color;
   line-height: 24px;
   transition: $sm-transition;
+  img {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%)
+      hue-rotate(163deg) brightness(103%) contrast(103%);
+  }
   &:hover {
     background-color: $blue-dark-color;
   }

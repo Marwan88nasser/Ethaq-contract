@@ -100,7 +100,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 125px;
+  width: 130px;
   height: 35px;
   gap: 5px;
   line-height: 35px;
@@ -112,6 +112,9 @@
   color: #fff;
   line-height: 24px;
   transition: 0.3s;
+}
+.main-btn img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(163deg) brightness(103%) contrast(103%);
 }
 .main-btn:hover {
   background-color: #1E88E5;
@@ -214,6 +217,7 @@
   left: 10px;
   top: 50%;
   transform: translateY(-50%);
+  filter: brightness(0) saturate(100%) invert(62%) sepia(0%) saturate(19%) hue-rotate(209deg) brightness(110%) contrast(112%);
 }
 
 * {

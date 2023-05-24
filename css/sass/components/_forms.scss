@@ -37,6 +37,8 @@
       left: 10px;
       top: 50%;
       transform: translateY(-50%);
+      filter: brightness(0) saturate(100%) invert(62%) sepia(0%) saturate(19%)
+        hue-rotate(209deg) brightness(110%) contrast(112%);
     }
   }
 }
