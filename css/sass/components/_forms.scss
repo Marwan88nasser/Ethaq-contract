@@ -2,20 +2,21 @@
   width: 100%;
   span {
     display: block;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 16px;
     line-height: 24px;
     text-align: right;
     color: #262424;
     margin-bottom: 10px;
   }
-  input {
+  input ,select,textarea{
     width: 100%;
     border: 1px solid #cecece;
     border-radius: 4px;
-    padding: 8px 14px;
+    padding: 12px 14px;
+    appearance: none;
     transition: $sm-transition;
-    &::placeholder {
+    &::placeholder{
       transition: $sm-transition;
       font-weight: 400;
       font-size: 14px;
@@ -30,8 +31,16 @@
   }
   .input-box {
     position: relative;
-    input {
+    input,select {
       padding-left: 30px;
+    }
+    select{
+      font-weight: 400;
+      font-size: 14px;
+      color: #797979;
+    }
+    textarea {
+      height: 150px;
     }
     img {
       position: absolute;
@@ -39,7 +48,17 @@
       top: 50%;
       transform: translateY(-50%);
       filter: brightness(0) saturate(100%) invert(62%) sepia(0%) saturate(19%)
-        hue-rotate(209deg) brightness(110%) contrast(112%);
+      hue-rotate(209deg) brightness(110%) contrast(112%);
+    }
+    .arrow {
+      position: absolute;
+      color: #0F0A0A;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 12px;
+
+      height: auto;
     }
   }
 }
