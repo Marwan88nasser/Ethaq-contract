@@ -56,6 +56,14 @@
   color: #777;
 }
 // Background Color
+.section-bg {
+  background-color: $bg-section-main;
+}
 .section-bg-alt {
   background-color: $bg-section-alt;
+}
+
+// gap 
+.gap-1px {
+  gap: 1px;
 }
