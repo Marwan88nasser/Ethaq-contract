@@ -35,6 +35,14 @@
 .main-label {
 }
 
+.small-label {
+  font-weight: 300;
+  font-size: 14px;
+  text-align: right;
+  color: #000000;
+  opacity: 0.9;
+}
+
 // badge
 .badge {
   @include flex-center;

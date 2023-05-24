@@ -1,6 +1,9 @@
 .between-box {
-    @include flex-between;
+  @include flex-between;
+  flex-wrap: wrap;
+  gap: 20px;
 }
+
 .box-content {
     background: $white-color;
     overflow: hidden;
@@ -111,6 +114,25 @@
             height: auto;
         }
     }
+    &.items-money {
+      .item-1,
+      .item-2 {
+        width: calc(22.5% - 0.5px);
+      }
+      .item-3 {
+        width: calc(55% - 1px);
+      }
+      @include maxWidth(md) {
+        .item-1,
+        .item-2 {
+          width: calc(50% - 0.5px);
+        }
+        .item-3 {
+          width: calc(100%);
+        }
+      }
+    }
+  }
 }
 
 .main-prog {
