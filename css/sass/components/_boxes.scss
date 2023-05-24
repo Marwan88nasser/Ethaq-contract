@@ -1,3 +1,5 @@
 .between-box {
   @include flex-between;
+  flex-wrap: wrap;
+  gap: 20px;
 }

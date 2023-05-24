@@ -162,6 +162,14 @@
   color: #949494;
 }
 
+.small-label {
+  font-weight: 300;
+  font-size: 14px;
+  text-align: right;
+  color: #000000;
+  opacity: 0.9;
+}
+
 .badge {
   display: flex;
   align-items: center;
@@ -184,6 +192,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .input-custom {
@@ -206,6 +216,8 @@
   transition: 0.3s;
 }
 .input-custom input::-moz-placeholder {
+  -moz-transition: 0.3s;
+  transition: 0.3s;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
@@ -214,6 +226,7 @@
   color: #797979;
 }
 .input-custom input::placeholder {
+  transition: 0.3s;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
@@ -236,6 +249,86 @@
   top: 50%;
   transform: translateY(-50%);
   filter: brightness(0) saturate(100%) invert(62%) sepia(0%) saturate(19%) hue-rotate(209deg) brightness(110%) contrast(112%);
+}
+
+.box-search {
+  position: relative;
+  width: 551px;
+}
+.box-search input {
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 11px 14px;
+  padding-right: 38px;
+  transition: 0.3s;
+}
+.box-search input::-moz-placeholder {
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: right;
+  letter-spacing: 0.015em;
+  color: #797979;
+}
+.box-search input::placeholder {
+  transition: 0.3s;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: right;
+  letter-spacing: 0.015em;
+  color: #797979;
+}
+.box-search input:focus {
+  border-color: #2E5789;
+}
+.box-search img {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.form-switch {
+  padding-right: 0em;
+  margin-bottom: 0;
+}
+.form-switch .form-check-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.form-switch .form-check-label .form-check-input {
+  width: 44.42px;
+  height: 27px;
+  float: left;
+}
+.form-switch .form-check-label .form-check-input:checked {
+  border-color: #00d215;
+  background-color: #00d215;
+}
+.form-switch .form-check-label .form-check-input:focus {
+  border-color: hsl(126, 98.36%, 76.08%);
+  box-shadow: 0 0 0 0.25rem hsla(126, 98.36%, 52.16%, 0.25);
+}
+.form-switch .form-check-label span {
+  padding-left: 1.9em;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 29px;
+}
+
+.form-select {
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 4px !important;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: right;
+  color: #000000;
 }
 
 * {
@@ -372,6 +465,12 @@ input:focus::placeholder {
   color: #fff;
 }
 
+.content-side {
+  padding: 20px;
+  border: 1px solid #f2f2f2;
+  border-radius: 8px;
+}
+
 .profile-nav .nav-link {
   border: 0;
   border-bottom: 1px solid #d6d6d6;
@@ -442,7 +541,7 @@ input:focus::placeholder {
   border: 1px solid #e0e0e0;
 }
 .main-table thead {
-  background: #F9FAFC;
+  background: #f9fafc;
 }
 .main-table thead tr th {
   padding: 12px 13px;
@@ -457,11 +556,52 @@ input:focus::placeholder {
   padding: 10px 13px;
   font-weight: 500;
   font-size: 14px;
-  color: #7D7D7D;
+  color: #7d7d7d;
 }
 .main-table tbody tr td .form-check .form-check-input {
   width: 3.4em !important;
   height: 1.7em;
+}
+
+.box-search {
+  position: relative;
+  width: 551px;
+}
+.box-search input {
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 10px 14px;
+  padding-right: 38px;
+  transition: 0.3s;
+}
+.box-search input::-moz-placeholder {
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: right;
+  letter-spacing: 0.015em;
+  color: #797979;
+}
+.box-search input::placeholder {
+  transition: 0.3s;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: right;
+  letter-spacing: 0.015em;
+  color: #797979;
+}
+.box-search input:focus {
+  border-color: #2E5789;
+}
+.box-search img {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
 }
 
 .main-nav {
