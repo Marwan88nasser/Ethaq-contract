@@ -14,10 +14,29 @@
         .item {
             padding: 20px;
             background-color: $white-color;
-            .sm-title {
-                font-size: 14px;
+            .title {
                 margin-bottom: 10px;
-                color: #9d9d9d;
+                &.sm {
+                    font-size: 14px;
+                }
+                &.md {
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+                &.lg {
+                    font-weight: 600;
+                    font-size: 22px;
+                }
+                &.xl {
+                    font-weight: 600;
+                    font-size: 27px;
+                }
+                &.gray {
+                    color: #9d9d9d;
+                }
+                &.black {
+                    color: #0f0a0a;
+                }
             }
             .price {
                 font-weight: 700;
@@ -25,9 +44,24 @@
                 line-height: 48px;
                 color: $blue-color;
                 span {
-                  font-weight: normal;
-                  font-size: 20px;
+                    font-weight: normal;
+                    font-size: 20px;
                 }
+            }
+            .link {
+                .icon {
+                    width: 56px;
+                    height: auto;
+                    margin: 0 auto;
+                    font-size: 56px;
+                    margin-bottom: 14px;
+                }
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-weight: 500;
+                font-size: 16px;
+                color: $blue-color !important;
             }
         }
         &.items-money {
@@ -48,5 +82,49 @@
                 }
             }
         }
+        &.items-data {
+            .item {
+                width: calc((100% / 3) - (2px / 3));
+            }
+            .item-before-prog {
+                width: calc((100% / 3) - 0.5px);
+            }
+            .item-prog {
+                width: calc((100% / 3 * 2) - 0.5px);
+            }
+            @include maxWidth(md) {
+                .item {
+                    width: calc(50% - 0.5px);
+                }
+                .item-prog {
+                    width: 100%;
+                }
+            }
+        }
     }
+    .main-btn {
+        height: 45px;
+        width: 200px;
+        @include maxWidth(md) {
+            padding: 0.4rem 1rem;
+            width: auto;
+            height: auto;
+        }
+    }
+}
+
+.main-prog {
+  height: 8px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 50px;
+  background-color: #E7E7E7;
+  .child-prog {
+    border-radius: 50px;
+    background-color: #33B469;
+    height: 100%;
+    &.yellow {
+      background-color: #FB9702;
+    }
+  }
 }
