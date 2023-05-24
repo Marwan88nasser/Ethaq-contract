@@ -58,3 +58,60 @@
     background-color: $red-color;
   }
 }
+
+.more-btn {
+  @include flex-center;
+  width: 80px;
+  height: 35px;
+  gap: 8px;
+  line-height: 35px;
+  background-color: $white-color;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  transition: $sm-transition;
+  i,
+  svg {
+    font-size: 13px;
+  }
+  &:hover {
+    background-color: #f3f2f2;
+  }
+}
+
+.buy-btn {
+  @include flex-center;
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  font-weight: 400;
+  font-size: 16px;
+  background-color: #2b7cd3;
+  color: $white-color;
+  border-radius: 4px;
+  transition: $sm-transition;
+  &:hover {
+    background-color: #468edb;
+  }
+}
+
+.heart-btn {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  transition: $sm-transition;
+  @include flex-center;
+  border: 0.5px solid #e2e2e2;
+  border-radius: 4px;
+  background-color: $white-color;
+  background-image: url('../images/icon/heart.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  &:hover {
+    background-color: #f3f2f2;
+  }
+  &.active {
+    background-image: url('../images/icon/heart-color.png');
+  }
+}

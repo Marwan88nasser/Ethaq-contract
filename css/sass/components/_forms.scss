@@ -46,7 +46,7 @@
 
 .box-search {
   position: relative;
-  width: 551px;
+  width: 500px;
   input {
     width: 100%;
     border: 1px solid #e0e0e0;
@@ -82,8 +82,8 @@
     @include flex-center;
     gap: 6px;
     .form-check-input {
-      width: 44.42px;
-      height: 27px;
+      width: 45px;
+      height: 25px;
       float: left;
       &:checked {
         border-color: #00d215;
@@ -95,10 +95,9 @@
       }
     }
     span {
-      padding-left: 1.9em;
+      padding-left: 2em;
       font-weight: 400;
-      font-size: 20px;
-      line-height: 29px;
+      font-size: 18px;
     }
   }
 }

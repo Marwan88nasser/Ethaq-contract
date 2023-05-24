@@ -209,33 +209,80 @@ input {
   }
 }
 
-.box-search {
-  position: relative;
-  width: 551px;
-  input {
+
+.box-member {
+  .img-cover {
+    border-radius: 4px 4px 0px 0px;
     width: 100%;
-    border: 1px solid #e0e0e0;
-    border-radius: 4px;
-    padding: 10px 14px;
-    padding-right: 38px;
-    transition: $sm-transition;
-    &::placeholder {
-      transition: $sm-transition;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 21px;
-      text-align: right;
-      letter-spacing: 0.015em;
-      color: #797979;
-    }
-    &:focus {
-      border-color: $main-color;
+    height: 145px;
+    img {
+      border-radius: 4px 4px 0px 0px;
+      @include cover-img;
     }
   }
-  img {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
+  .content {
+    border: 0.5px solid #cccccc;
+    padding: 15px;
+    border-radius: 0px 0px 4px 4px;
+    .member {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 10px;
+      margin-bottom: 12px;
+      .img-holder {
+        img {
+          @include circle(50px);
+        }
+      }
+      .info {
+        .name {
+          font-weight: 400;
+          font-size: 16px;
+          text-align: right;
+        }
+        .job {
+          margin-bottom: 0;
+          font-weight: 300;
+          font-size: 14px;
+          text-align: right;
+          color: #949494;
+        }
+      }
+    }
+    .des {
+      font-weight: 300;
+      font-size: 16px;
+      margin-bottom: 12px;
+      text-align: right;
+    }
+    .bar-more {
+      margin-bottom: 12px;
+      @include flex-between;
+      .rate {
+        font-weight: 600;
+        font-size: 17px;
+        small {
+          font-weight: 500;
+          font-size: 13px;
+          opacity: 0.5;
+        }
+      }
+    }
+    .buy-bar {
+      @include flex-between;
+      .btn-holder {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 6px;
+      }
+      .price {
+        margin-bottom: 0;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 24px;
+      }
+    }
   }
 }
