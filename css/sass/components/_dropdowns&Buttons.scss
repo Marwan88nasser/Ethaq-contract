@@ -94,9 +94,22 @@
   &:hover {
     background-color: #468edb;
   }
+  &.full {
+    width: 100%;
+    height: 55px;
+    line-height: 55px;
+    font-weight: 700;
+    font-size: 23px;
+    span {
+      margin-left: 5px;
+      font-weight: 400;
+      font-size: 18px;
+    }
+  }
 }
 
-.heart-btn {
+.heart-btn,
+.share-btn {
   width: 40px;
   height: 40px;
   line-height: 40px;
@@ -105,17 +118,25 @@
   border: 0.5px solid #e2e2e2;
   border-radius: 4px;
   background-color: $white-color;
-  background-image: url('../images/icon/heart.png');
+  background-image: url("../images/icon/heart.png");
   background-repeat: no-repeat;
   background-position: center center;
   &:hover {
     background-color: #f3f2f2;
   }
   &.active {
-    background-image: url('../images/icon/heart-color.png');
+    background-image: url("../images/icon/heart-color.png");
+  }
+  &.full {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
   }
 }
 
+.share-btn {
+  background-image: none;
+}
 .dots-menu {
   display: flex;
   align-items: center;
