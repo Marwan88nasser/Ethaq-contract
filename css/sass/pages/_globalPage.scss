@@ -406,4 +406,59 @@ input {
   padding: 20px;
   background: #fafafa;
   border-radius: 8px;
+  .price {
+    @include flex-between;
+    .name {
+      font-weight: 400;
+      font-size: 20px;
+      text-align: right;
+      margin-bottom: 0;
+    }
+    .pr {
+      font-weight: 700;
+      font-size: 24px;
+      text-align: left;
+      margin-bottom: 0;
+    }
+  }
+  .options {
+    margin-bottom: 20px;
+    @include flex-between;
+    .holder {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 8px;
+      i,
+      svg {
+        font-size: 18px;
+        margin-top: 5px;
+      }
+      .name {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+        text-align: right;
+        small {
+          opacity: 0.5;
+        }
+        margin-bottom: 0;
+      }
+      &.type {
+        align-items: center;
+        .name {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 24px;
+          text-align: right;
+        }
+      }
+    }
+    .inp-holder {
+      .form-check-input {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
 }

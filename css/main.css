@@ -316,6 +316,13 @@
   background-color: #ff731d;
 }
 
+.title-braek {
+  font-weight: 500;
+  font-size: 20px;
+  text-align: right;
+  margin-bottom: 25px;
+}
+
 .between-box {
   display: flex;
   align-items: center;
@@ -853,6 +860,47 @@
   height: 22px;
 }
 
+.custom-check {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #ACACAC;
+  border-radius: 4px !important;
+}
+.custom-check::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: #00D215;
+  background-image: url("../../../images/icon/true-mark.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 19px;
+  transition: 0.3s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+}
+.custom-check:focus {
+  border-color: #86fe92;
+  box-shadow: 0 0 0 0.25rem hsla(126, 98.36%, 52.16%, 0.25);
+}
+.custom-check:checked {
+  border-color: #00D215;
+  background-color: #00D215;
+  background-image: none !important;
+}
+.custom-check:checked:focus {
+  box-shadow: 0 0 0 0.25rem hsla(126, 98.36%, 52.16%, 0.25);
+}
+.custom-check:checked::before {
+  opacity: 1;
+  visibility: visible;
+}
+
 * {
   box-sizing: border-box;
   padding: 0%;
@@ -1279,6 +1327,63 @@ input:focus::placeholder {
   padding: 20px;
   background: #fafafa;
   border-radius: 8px;
+}
+.content-gray .price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.content-gray .price .name {
+  font-weight: 400;
+  font-size: 20px;
+  text-align: right;
+  margin-bottom: 0;
+}
+.content-gray .price .pr {
+  font-weight: 700;
+  font-size: 24px;
+  text-align: left;
+  margin-bottom: 0;
+}
+.content-gray .options {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.content-gray .options .holder {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 8px;
+}
+.content-gray .options .holder i,
+.content-gray .options .holder svg {
+  font-size: 18px;
+  margin-top: 5px;
+}
+.content-gray .options .holder .name {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: right;
+  margin-bottom: 0;
+}
+.content-gray .options .holder .name small {
+  opacity: 0.5;
+}
+.content-gray .options .holder.type {
+  align-items: center;
+}
+.content-gray .options .holder.type .name {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: right;
+}
+.content-gray .options .inp-holder .form-check-input {
+  width: 20px;
+  height: 20px;
 }
 
 .main-nav {
