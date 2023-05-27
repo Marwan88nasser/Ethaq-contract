@@ -286,6 +286,44 @@ input {
       }
     }
   }
+  &.box-member-second {
+    .bar-info {
+      @include flex-between;
+      margin-bottom: 2px;
+      .title {
+        font-weight: 600;
+        font-size: 18px;
+        text-align: right;
+        margin-bottom: 0;
+      }
+    }
+    .cat {
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+      font-weight: 400;
+      font-size: 16px;
+      text-align: right;
+      color: #8f8f8f;
+      border-bottom: 1px solid #e7e7e7;
+    }
+    .date {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 5px;
+      font-weight: 400;
+      font-size: 15px;
+      text-align: right;
+      color: #262424;
+    }
+    .price {
+      margin-bottom: 15px;
+      font-weight: 700;
+      font-size: 20px;
+      text-align: right;
+    }
+  }
 }
 
 .breadcrumb {
@@ -338,7 +376,7 @@ input {
         font-size: 18px;
         color: #000000;
         opacity: 0.5;
-    }
+      }
       .top-bar {
         display: flex;
         align-items: center;
@@ -412,10 +450,41 @@ input {
   background: #fafafa;
   border-radius: 8px;
   .serves-info {
-    img {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6px;
+    .serves-img {
       width: 96px;
       height: 65px;
       border-radius: 4px;
+    }
+    .info {
+      .title {
+        font-weight: 400;
+        font-size: 16px;
+        text-align: right;
+      }
+      .name {
+        margin-bottom: 0;
+        img {
+          width: 12px;
+        }
+      }
+    }
+  }
+  .total {
+    @include flex-between;
+    .word {
+      font-weight: 400;
+      font-size: 20px;
+      text-align: right;
+      margin-bottom: 0;
+    }
+    .price {
+      font-weight: 700;
+      font-size: 35px;
+      margin-bottom: 0;
     }
   }
   .price {
@@ -549,6 +618,232 @@ input {
     gap: 5px;
     img {
       width: 45px;
+    }
+  }
+}
+
+.status {
+  width: 86px;
+  height: 36px;
+  line-height: 36px;
+  background-color: #eafff3;
+  border-radius: 50px;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  color: #33b469;
+  &.danger {
+    background-color: #ffeeee;
+    color: #ed3a3a;
+  }
+}
+
+.box-message {
+  background: #f9f9f9;
+  border-radius: 4px;
+  padding: 20px;
+  @include flex-between;
+  .right-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    flex: 1;
+    .img-holder {
+      img {
+        @include circle(56px);
+      }
+    }
+    .content {
+      flex: 1;
+      .title {
+        font-weight: 600;
+        font-size: 18px;
+        text-align: right;
+        color: #2b7cd3;
+        margin-bottom: 7px;
+      }
+      .small-bar {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 15px;
+        p {
+          margin-bottom: 0;
+          font-weight: 400;
+          font-size: 12px;
+          text-align: right;
+          color: #7b7b7b;
+          i,
+          svg {
+            color: #7b7b7b;
+            margin-left: 2px;
+          }
+        }
+      }
+      .des {
+        font-weight: 500;
+        margin-bottom: 0;
+        font-size: 16px;
+        text-align: right;
+        color: #262424;
+      }
+    }
+  }
+  .arrow-icon {
+    i,
+    svg {
+      color: #2b7cd3;
+      font-size: 16px;
+    }
+  }
+}
+
+.list-attached {
+  li {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+    .box-file {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 10px;
+      .icon {
+        width: 66px;
+        height: 66px;
+        background-color: #f9f9f9;
+        border-radius: 4px;
+        @include flex-center;
+        img {
+          width: 25px;
+        }
+      }
+      .info {
+        @include center-column;
+        align-items: flex-end;
+        .title {
+          font-weight: 600;
+          margin-bottom: 4px;
+        }
+        .size {
+          font-weight: 400;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+
+.list-not {
+  max-height: 410px;
+  overflow-y: auto;
+  li {
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+    font-weight: 400;
+    font-size: 14px;
+    text-align: right;
+    opacity: 0.5;
+  }
+}
+
+.box-chat {
+  .user-info {
+    @include flex-center;
+    justify-content: flex-start;
+    gap: 10px;
+    border-bottom: 1px solid #f2f2f2;
+    padding-bottom: 19px;
+    margin-bottom: 19px;
+    img {
+      @include circle(40px);
+    }
+    .name {
+      font-weight: 400;
+      font-size: 18px;
+      text-align: right;
+      margin-bottom: 0;
+    }
+    i,
+    svg {
+      font-size: 12px;
+      color: #edebeb;
+      &.active {
+        color: #33b469;
+      }
+    }
+  }
+  .date {
+    position: relative;
+    @include flex-center;
+    background-color: $white-color;
+    margin-bottom: 15px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      height: 1px;
+      width: 100%;
+      background-color: #f2f2f2;
+    }
+  }
+  .box-replay {
+    width: 60%;
+    margin-right: auto;
+    margin-bottom: 40px;
+    .holder {
+      display: flex;
+      align-items: flex-start;
+      justify-content: end;
+      gap: 10px;
+      .img-holder {
+        img {
+          @include circle(30px);
+        }
+      }
+      .content {
+        position: relative;
+        background: #f3f3f3;
+        border-radius: 4px;
+        padding: 13px;
+        font-weight: 400;
+        font-size: 16px;
+        text-align: right;
+        color: #262424;
+        .time {
+          position: absolute;
+          bottom: -22px;
+          right: 0;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 12px;
+          text-align: right;
+          color: #898989;
+        }
+      }
+    }
+    &.client {
+      margin-left: auto;  
+      margin-right: 0;  
+      .holder {
+        justify-content: flex-start;
+        .content {
+          background: #2B7CD3;
+          color: #FFFFFF;
+        }
+      }
+    }
+    @include maxWidth(xm) {
+      width: 100%;
+    }
+    @media (min-width: 575.98px) and (max-width: 991.98px) {
+      width: 80%;
     }
   }
 }
