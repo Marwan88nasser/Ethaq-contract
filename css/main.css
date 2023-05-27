@@ -1232,12 +1232,12 @@ input:focus::placeholder {
   font-weight: 500;
   font-size: 20px;
   text-align: right;
+  color: rgba(24, 24, 24, 0.5019607843);
 }
 .breadcrumb .breadcrumb-item.active {
+  color: #212121;
   font-weight: 600;
   font-size: 20px;
-  color: #212121;
-  opacity: 0.5;
   padding-right: 2px;
 }
 .breadcrumb .breadcrumb-item.active::before {
@@ -1268,6 +1268,11 @@ input:focus::placeholder {
   width: 65px;
   height: 65px;
   border-radius: 50%;
+}
+.box-service .member .info .dep {
+  font-size: 18px;
+  color: #000000;
+  opacity: 0.5;
 }
 .box-service .member .info .top-bar {
   display: flex;
@@ -1340,6 +1345,11 @@ input:focus::placeholder {
   background: #fafafa;
   border-radius: 8px;
 }
+.content-gray .serves-info img {
+  width: 96px;
+  height: 65px;
+  border-radius: 4px;
+}
 .content-gray .price {
   display: flex;
   align-items: center;
@@ -1396,6 +1406,83 @@ input:focus::placeholder {
 .content-gray .options .inp-holder .form-check-input {
   width: 20px;
   height: 20px;
+}
+.content-gray .btn-chat {
+  width: 100%;
+  height: 56px;
+  line-height: 56px;
+  border: 1px solid #2b7cd3;
+  color: #2b7cd3;
+  background-color: #fff;
+  transition: 0.3s;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+}
+.content-gray .btn-chat img {
+  margin-left: 4px;
+}
+.content-gray .btn-chat:hover {
+  background-color: #2b7cd3;
+  color: #fff;
+}
+.content-gray .btn-chat:hover img {
+  filter: brightness(0) saturate(100%) invert(94%) sepia(0%) saturate(7500%) hue-rotate(145deg) brightness(115%) contrast(105%);
+}
+.content-gray .full-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.content-gray .full-mark p {
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 28px;
+  color: #fb9702;
+}
+
+.box-pay {
+  padding: 20px;
+}
+.box-pay .name {
+  font-weight: 500;
+  font-size: 24px;
+  text-align: right;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1019607843);
+  padding-bottom: 30px;
+  margin-bottom: 40px;
+}
+.box-pay .pay-btn {
+  position: relative;
+  width: 100%;
+  height: 56px;
+  line-height: 56px;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #2b7cd3;
+  transition: 0.3s;
+  border-radius: 4px;
+}
+.box-pay .pay-btn:hover {
+  background-color: #1E88E5;
+}
+.box-pay .pay-btn .icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.box-pay .par-image {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+}
+.box-pay .par-image img {
+  width: 45px;
 }
 
 .main-nav {
