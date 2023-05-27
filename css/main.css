@@ -492,7 +492,7 @@
 }
 .instructions-box .title {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 1rem;
 }
 .instructions-box .text {
@@ -500,6 +500,16 @@
   margin-bottom: 1.5rem;
   font-weight: 400;
   font-size: 14px;
+}
+.instructions-box .title-sm {
+  font-weight: 400;
+  font-size: 15px;
+}
+.instructions-box .img {
+  width: 40px;
+  height: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .vendor-tabs {
@@ -610,6 +620,18 @@
 }
 .main-alert span {
   opacity: 0.5;
+}
+
+.main-link {
+  font-weight: 400;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  gap: 12px;
+  color: #2B7CD3 !important;
 }
 
 .input-custom {
