@@ -294,12 +294,12 @@ input {
       font-weight: 500;
       font-size: 20px;
       text-align: right;
+      color: #18181880;
     }
     &.active {
+      color: #212121;
       font-weight: 600;
       font-size: 20px;
-      color: #212121;
-      opacity: 0.5;
       padding-right: 2px;
       &::before {
         content: "" !important;
@@ -406,6 +406,13 @@ input {
   padding: 20px;
   background: #fafafa;
   border-radius: 8px;
+  .serves-info {
+    img {
+      width: 96px;
+      height: 65px;
+      border-radius: 4px;
+    }
+  }
   .price {
     @include flex-between;
     .name {
@@ -459,6 +466,84 @@ input {
         width: 20px;
         height: 20px;
       }
+    }
+  }
+  .btn-chat {
+    img {
+      margin-left: 4px;
+    }
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+    border: 1px solid #2b7cd3;
+    color: #2b7cd3;
+    background-color: $white-color;
+    transition: $sm-transition;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    &:hover {
+      background-color: #2b7cd3;
+      color: $white-color;
+      img {
+        filter: brightness(0) saturate(100%) invert(94%) sepia(0%)
+          saturate(7500%) hue-rotate(145deg) brightness(115%) contrast(105%);
+      }
+    }
+  }
+  .full-mark {
+    @include flex-center;
+    gap: 5px;
+    img {
+    }
+    p {
+      margin-bottom: 0;
+      font-weight: 700;
+      font-size: 28px;
+      color: #fb9702;
+    }
+  }
+}
+
+.box-pay {
+  padding: 20px;
+  .name {
+    font-weight: 500;
+    font-size: 24px;
+    text-align: right;
+    border-bottom: 1px solid #0000001a;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+  }
+  .pay-btn {
+    position: relative;
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #2b7cd3;
+    transition: $sm-transition;
+    border-radius: 4px;
+    &:hover {
+      background-color: $blue-dark-color;
+    }
+    .icon {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  .par-image {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+    img {
+      width: 45px;
     }
   }
 }
